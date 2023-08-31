@@ -6,6 +6,8 @@ from asgiref.sync import sync_to_async
 
 from .models import Room, Message
 
+
+
 class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         self.room_name = self.scope['url_route']['kwargs']['room_name']
